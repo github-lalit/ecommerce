@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
+import Contact from './pages/Contact/Contact';
 
 const App = () => {
   const [orderPopup, setOrderPopup] = useState(false);
@@ -16,6 +17,7 @@ const App = () => {
         <Navbar handleOrderPopup={handleOrderPopup} />
           <Routes>
             <Route path='/' element={<Home handleOrderPopup={handleOrderPopup} orderPopup={orderPopup} setOrderPopup={setOrderPopup} />} />
+            <Route path='contact' element={<Contact />} />
           </Routes>
         <Footer />
       </div>
